@@ -13,7 +13,7 @@ GoogLeNet is known for its inception modules, which allow the network to learn c
 
 4.Auxiliary Classifiers: GoogLeNet introduces auxiliary classifiers connected to intermediate layers of the network. These classifiers provide additional supervision during training and help to improve the gradient flow in deeper layers.
 
-### Usage
+### [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=B8F733&background=89D1FF00&width=100&lines=Usage)](https://git.io/typing-svg)
 To usage first install requirement modules:
 ```shell
 pip install -r requirements.txt
