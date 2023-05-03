@@ -1,4 +1,4 @@
-# GoogLeNet with TensorFlow Keras
+# [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7C5B1&background=89D1FF00&repeat=false&width=440&lines=GoogLeNet+with+TensorFlow+Keras)](https://git.io/typing-svg)
 This repository contains the implementation of GoogLeNet architecture using TensorFlow Keras. GoogLeNet is a deep convolutional neural network (CNN) architecture that was introduced by Szegedy et al. in their 2014 paper, "Going Deeper with Convolutions." The architecture won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2014.
 
 ## GoogLeNet Architecture
