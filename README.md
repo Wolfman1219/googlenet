@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=B8F733&background=89D1FF00&repeat=false&width=440&lines=GoogLeNet+with+TensorFlow+Keras)](https://git.io/typing-svg)
+# ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=B8F733&background=89D1FF00&repeat=false&width=440&lines=GoogLeNet+with+TensorFlow+Keras)
 This repository contains the implementation of GoogLeNet architecture using TensorFlow Keras. GoogLeNet is a deep convolutional neural network (CNN) architecture that was introduced by Szegedy et al. in their 2014 paper, "Going Deeper with Convolutions." The architecture won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2014.
 
 ## GoogLeNet Architecture
@@ -13,7 +13,7 @@ GoogLeNet is known for its inception modules, which allow the network to learn c
 
 4.Auxiliary Classifiers: GoogLeNet introduces auxiliary classifiers connected to intermediate layers of the network. These classifiers provide additional supervision during training and help to improve the gradient flow in deeper layers.
 
-### [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=B8F733&background=89D1FF00&width=100&lines=Usage)](https://git.io/typing-svg)
+### ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=B8F733&background=89D1FF00&width=100&lines=Usage)
 To usage first install requirement modules:
 ```shell
 pip install -r requirements.txt
