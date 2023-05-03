@@ -4,6 +4,7 @@ from tensorflow.keras.datasets import cifar10
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow_datasets as tfds
+from tensorflow.keras.utils import plot_model
 
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 
@@ -89,7 +90,7 @@ model = googlenet(input_shape, num_classes)
 model.compile(optimizer=optimizers.Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 epochs = 100
-
+plot_model(model, to_file='googlenet.png', show_shapes=True)
 
 history = model.fit(
     dataset,
