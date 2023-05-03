@@ -1,21 +1,9 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models, optimizers
-from tensorflow.keras.datasets import cifar10
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow_datasets as tfds
 from tensorflow.keras.utils import plot_model
 
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
-
-# Normalize the data
-x_train = x_train.astype('float32') / 255.0
-x_test = x_test.astype('float32') / 255.0
-
-# Convert class vectors to binary class matrices
-y_train = to_categorical(y_train, 10)
-y_test = to_categorical(y_test, 10)
-
+# Inception blokini qurish
 def inception_module(x, filters_1x1, filters_3x3_reduce, filters_3x3, filters_5x5_reduce, filters_5x5, filters_pool_proj):
     conv_1x1 = layers.Conv2D(filters_1x1, (1, 1), padding='same', activation='relu')(x)
 
@@ -31,6 +19,8 @@ def inception_module(x, filters_1x1, filters_3x3_reduce, filters_3x3, filters_5x
     output = layers.concatenate([conv_1x1, conv_3x3, conv_5x5, pool_proj], axis=-1)
     return output
 
+
+# Googlenet ni qurish
 def googlenet(input_shape, num_classes):
     input_layer = layers.Input(shape=input_shape)
 
@@ -63,6 +53,7 @@ def googlenet(input_shape, num_classes):
     model = models.Model(input_layer, x)
     return model
 
+# datasetni yuklash
 input_shape = (224, 224, 3)
 num_classes = 12
 batch_size = 128
@@ -76,8 +67,7 @@ def preprocess_data(example):
 dataset = tfds.load("stanford_online_products", split = "train")
 
 ds_test = tfds.load("stanford_online_products", split = "test")
-# Preprocess the data
-
+# datsetni to'g'irlash
 
 dataset = dataset.map(preprocess_data)
 ds_test = ds_test.map(preprocess_data)
@@ -97,7 +87,3 @@ history = model.fit(
     epochs=epochs,
     validation_data=ds_test,
 )
-
-score = model.evaluate(x_test, y_test, verbose=0)
-print('Test loss:', score[0])
-print('Test accuracy:', score[1])
